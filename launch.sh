@@ -14,7 +14,7 @@ echo "---" | tee -a /tmp/polybar1.log /tmp/polybar2.log
 monitor_list="DP-0 HDMI-0"
 
 for m in $monitor_list; do
-    MONITOR=$m polybar --reload example &
+    MONITOR=$m polybar --reload mybar &
     sleep 1 # to make sure tray is displayed on the first bar
 done
 
