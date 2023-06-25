@@ -8,13 +8,13 @@ case "$1" in
 
         case "$yad" in
             Shutdown)
-                poweroff
+                systemctl poweroff
                 ;;
             Reboot)
-                reboot
+                systemctl reboot
                 ;;
             Suspend)
-                hibernate
+                systemctl suspend 
                 ;;
             Logout)
                 bspc quit
