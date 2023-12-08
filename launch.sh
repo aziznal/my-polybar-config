@@ -11,7 +11,7 @@ echo "---" | tee -a /tmp/polybar1.log /tmp/polybar2.log
 # polybar example 2>&1 | tee -a /tmp/polybar1.log & disown
 
 # monitor_list=$(polybar --list-monitors | awk -F: '{print $1}')
-monitor_list="HDMI-0 HDMI-1 DP-0"
+monitor_list="HDMI-0 DP-2"
 
 for m in $monitor_list; do
     MONITOR=$m polybar --reload mybar &
