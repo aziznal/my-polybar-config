@@ -11,11 +11,13 @@ echo "---" | tee -a /tmp/polybar1.log /tmp/polybar2.log
 # polybar example 2>&1 | tee -a /tmp/polybar1.log & disown
 
 # monitor_list=$(polybar --list-monitors | awk -F: '{print $1}')
-monitor_list="DP-2 HDMI-0"
+# monitor_list="DP-2 HDMI-0"
 
-for m in $monitor_list; do
-    MONITOR=$m polybar --reload mybar &
-    sleep 1 # to make sure sys tray is displayed on the first bar
-done
+# for m in $monitor_list; do
+#     MONITOR=$m polybar --reload mybar &
+#     sleep 1 # to make sure sys tray is displayed on the first bar
+# done
+
+polybar --reload mybar &
 
 echo "Bars launched..."
